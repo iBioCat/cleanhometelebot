@@ -1,0 +1,6 @@
+asyncio==3.4.3
+aioschedule==0.5.2
+aiogram==2.13
+openpyxl==3.0.7
+telegram==0.0.1
+Flask==2.0.1
