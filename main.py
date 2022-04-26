@@ -11,7 +11,7 @@ from telegram import InlineKeyboardMarkup, TelegramObject
 import os
 from flask import Flask, request
 
-TOKEN = '1861854006:AAED23YkoxMj33ZJqTkZSJ5v5tMa3INs4yU'
+TOKEN = ''
 APP_URL = f"https://cleanhometelebot.herokuapp.com/{TOKEN}"
 
 bot = Bot(token=TOKEN)
@@ -39,7 +39,7 @@ async def command_handler(message: types.Message()):
     cleaning_log_wb = load_workbook('cleaning_log.xlsx')
     clsx = cleaning_log_wb['Sheet1']
     if message.text == '/points@PariglaHomebot':
-        points_message = "Глеб: {} \nCаша: {}".format(clsx.cell(row= 2,column= 10).value,clsx.cell(row= 3,column= 10).value)
+        points_message = "User1: {} \nUser2: {}".format(clsx.cell(row= 2,column= 10).value,clsx.cell(row= 3,column= 10).value)
         await bot.send_message(chat_id=message.chat.id,text=points_message)
 
 @dp.callback_query_handler()
